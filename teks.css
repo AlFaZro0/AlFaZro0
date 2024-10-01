@@ -1,0 +1,50 @@
+body {
+    overflow: hidden; 
+  }
+  
+  .card {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .card.animate {
+    transform: translateY(-10px);
+  }
+  
+  .polaroid {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .polaroid.animate {
+    transform: scale(1.1) rotate(5deg);
+  }
+  
+  .decorations img {
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .decorations img.animate {
+    opacity: 1;
+  }
+  
+  .text-center h1 {
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .text-center h2 {
+    animation: fadeIn 2s ease-in-out;
+    animation-delay: 1s;
+  }
+  
+  .text-center p {
+    animation: fadeIn 2s ease-in-out;
+    animation-delay: 2s;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

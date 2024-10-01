@@ -1,0 +1,110 @@
+body {
+  background-color: #4a4a4a;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+.card {
+  background: url("https://placehold.co/600x800") no-repeat center center;
+  background-size: cover;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  position: relative;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("https://placehold.co/600x800") no-repeat center center;
+  background-size: cover;
+  opacity: 0.5;
+}
+.content {
+  position: relative;
+  z-index: 1;
+}
+.polaroid {
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: 30px auto;
+  margin-left: 22px;
+  text-align: center;
+  border-radius: 10px;
+  display: inline-block;
+}
+.polaroid img {
+  max-width: 100%;
+}
+.polaroid p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.decorations img {
+  position: absolute;
+}
+.decorations .star1 {
+  top: 20px;
+  left: 20px;
+}
+.decorations .star2 {
+  top: 20px;
+  right: 20px;
+}
+.decorations .flower1 {
+  bottom: 20px;
+  left: 20px;
+}
+.decorations .flower2 {
+  bottom: 20px;
+  right: 20px;
+}
+.decorations .kiss {
+  bottom: 50px;
+  right: 50px;
+}
+.decorations .stamp {
+  bottom: 20px;
+  right: 20px;
+}
+
+.polaroid {
+
+transition: transform 0.5s ease-in-out;
+}
+
+.polaroid.animate {
+transform: scale(1.1) rotate(5deg);
+}
+
+.decorations img {
+transition: opacity 0.5s ease-in-out;
+}
+
+.decorations img.animate {
+opacity: 1;
+}
+
+.card {
+  animation: fadeIn 4s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
